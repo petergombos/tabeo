@@ -9,14 +9,19 @@ const reducers = combineReducers({
   form: reduxFormReducer
 })
 
-const enhancer = compose(
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  persistState()
-)
+const getComposeEnhancers = () => {
+  if (window.navigator.userAgent.includes('Chrome')) {
+    return compose(
+      persistState()
+      , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+  }
+  return compose(persistState())
+}
 
 const store = createStore(
   reducers,
-  enhancer
+  getComposeEnhancers()
 )
 
 export default store
