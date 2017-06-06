@@ -1,5 +1,5 @@
 import React from 'react'
-import MerchantView from '../MerchantView'
+import MerchantView from '../../containers/MerchantViewContainer'
 
 import './index.css'
 

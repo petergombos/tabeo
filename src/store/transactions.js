@@ -18,7 +18,7 @@ export const addTransaction = (payload) => ({
 const initialState = []
 
 // REDUCER
-const transaction = (state = initialState, action) => {
+const transactions = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
       return [
@@ -30,4 +30,4 @@ const transaction = (state = initialState, action) => {
   }
 }
 
-export default transaction
+export default transactions

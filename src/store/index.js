@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from 'redux'
+import { reducer as reduxFormReducer } from 'redux-form'
 import transactions from './transactions'
 
 const reducers = combineReducers({
-  transactions
+  transactions,
+  form: reduxFormReducer
 })
 
 const store = createStore(
