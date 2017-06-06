@@ -16,10 +16,10 @@ const persistStateMiddleware = persistState('transactions', {
 
 // Add Redux Devtools and Localstorage Support
 const getComposeEnhancers = () => {
-  if (window.navigator.userAgent.includes('Chrome')) {
+  if (window.navigator.userAgent.includes('Chrome') && window.__REDUX_DEVTOOLS_EXTENSION__) {
     return compose(
-      persistStateMiddleware
-      , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+      persistStateMiddleware,
+      window.__REDUX_DEVTOOLS_EXTENSION__()
     )
   }
   return compose(persistStateMiddleware)
