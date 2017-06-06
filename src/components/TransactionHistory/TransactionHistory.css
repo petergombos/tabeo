@@ -1,3 +1,7 @@
+.transaction-history{
+  overflow-x: scroll;
+}
+
 .transaction-history .stats{
   font-size: 1.2rem;
   margin-bottom: 15px;
@@ -17,6 +21,10 @@
 .transaction-history thead td img{
   width: 12px;
   margin-left: 5px;
+}
+
+.transaction-history tbody{
+  overflow: scroll;
 }
 
 .transaction-history tbody td{

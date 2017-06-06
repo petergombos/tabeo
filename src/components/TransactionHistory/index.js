@@ -49,11 +49,11 @@ class TransactionHistory extends Component {
         <table>
           <thead>
             <tr>
-              <td onClick={() => this.changeOrder('name')}>Name<img src={arrows} /></td>
-              <td onClick={() => this.changeOrder('price')}>Price<img src={arrows} /></td>
-              <td onClick={() => this.changeOrder('createdAt')}>Date<img src={arrows} /></td>
-              <td onClick={() => this.changeOrder('reference')}>Reference<img src={arrows} /></td>
-              <td onClick={() => this.changeOrder('status')}>Status<img src={arrows} /></td>
+              <td onClick={() => this.changeOrder('name')}>Name<img alt='' src={arrows} /></td>
+              <td onClick={() => this.changeOrder('price')}>Price<img alt='' src={arrows} /></td>
+              <td onClick={() => this.changeOrder('createdAt')}>Date<img alt='' src={arrows} /></td>
+              <td onClick={() => this.changeOrder('reference')}>Reference<img alt='' src={arrows} /></td>
+              <td onClick={() => this.changeOrder('status')}>Status<img alt='' src={arrows} /></td>
             </tr>
           </thead>
           <tbody>
