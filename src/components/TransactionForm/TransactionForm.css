@@ -34,6 +34,13 @@
   width: 45%;
 }
 
+@media (max-width: 500px) {
+  .transaction-form form div.half{
+    display: block;
+    width: 100%;
+  }
+}
+
 .transaction-form .form-footer{
   text-align: center;
 }

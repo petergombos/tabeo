@@ -25,6 +25,13 @@
   cursor: pointer;
 }
 
+@media (max-width: 500px) {
+  .merchant .tabs div{
+    display: block;
+    width: 100%;
+  }
+}
+
 .merchant .tabs div.active{
   background: #186e70;
 }
