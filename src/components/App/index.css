@@ -1,14 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow: auto;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #4e4e4e;
   background: #ef00df; /* fallback for old browsers */
-  background: -webkit-linear-gradient(133deg, #41a367, #004e76); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(133deg, #41a367, #004e76); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(133deg, #41a367, #004e76) fixed; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(133deg, #41a367, #004e76) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .pull-right{

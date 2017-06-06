@@ -5,6 +5,7 @@ import store from './store'
 import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
+// Let's render the App with our Redux store passed as context
 ReactDOM.render(
   <Provider store={store}>
     <App />

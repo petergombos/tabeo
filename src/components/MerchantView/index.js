@@ -14,6 +14,7 @@ class MerchantView extends Component {
     this.onSubmit = this.onSubmit.bind(this)
   }
 
+  // Toggle tabs
   showTab (key) {
     if (this.state.tab !== key) {
       this.setState({
@@ -22,6 +23,7 @@ class MerchantView extends Component {
     }
   }
 
+  // Submit values to redux, swith current tab to history view
   onSubmit (values) {
     this.props.addTransaction(values)
     this.showTab('history')

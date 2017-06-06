@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import FormInput from '../FormInput'
 import './TransactionForm.css'
 
+// Validations for each field
 const validate = values => {
   const errors = {}
   if (!values.name) {

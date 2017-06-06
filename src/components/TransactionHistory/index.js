@@ -18,10 +18,12 @@ class TransactionHistory extends Component {
   }
 
   changeOrder (key) {
+    // Set orderBy value if new key provided
     if (key !== this.state.order) {
       this.setState({
         order: key
       })
+    // Flip sortBy if same key is given
     } else {
       this.setState({
         sort: this.state.sort === 'asc' ? 'desc' : 'asc'
@@ -31,6 +33,7 @@ class TransactionHistory extends Component {
 
   render () {
     const { transactions } = this.props
+    // Order and Sort transactions according to state
     const orderedTransactions =
       orderBy(
         transactions.map(i => {

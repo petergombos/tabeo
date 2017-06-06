@@ -4,11 +4,13 @@ import persistState from 'redux-localstorage'
 
 import transactions from './transactions'
 
+// Reducer Definitions
 const reducers = combineReducers({
   transactions,
   form: reduxFormReducer
 })
 
+// Add Redux Devtools and Localstorage Support
 const getComposeEnhancers = () => {
   if (window.navigator.userAgent.includes('Chrome')) {
     return compose(
@@ -19,6 +21,7 @@ const getComposeEnhancers = () => {
   return compose(persistState())
 }
 
+// Creating the store
 const store = createStore(
   reducers,
   getComposeEnhancers()
