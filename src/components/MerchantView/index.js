@@ -29,7 +29,17 @@ class MerchantView extends Component {
   render () {
     const { transactions } = this.props
     return (
-      <div>
+      <div className='merchant'>
+        <div className='company'>
+          <div>
+            <span>Company Name</span>
+            <span className='pull-right'>Last logged in</span>
+          </div>
+          <div>
+            <span>sample@address.com</span>
+            <span className='pull-right'>05/06/17 13:12</span>
+          </div>
+        </div>
         <div className='tabs'>
           <div
             onClick={() => this.showTab('form')}

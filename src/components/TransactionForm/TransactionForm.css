@@ -1,0 +1,47 @@
+.transaction-form .info{
+  text-align: center;
+}
+.transaction-form .info h2{
+  margin-bottom: 10px;
+}
+.transaction-form .info p{
+  margin-top: 0;
+}
+.transaction-form form{
+  width: 400px;
+  max-width: 90%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.transaction-form form input{
+  width: 100%;
+  background: #c0dec3;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-bottom: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.transaction-form form input.required{
+  background: #e6d2d2;
+}
+
+.transaction-form form div.half{
+  display: inline-block;
+  width: 45%;
+}
+
+.transaction-form .form-footer{
+  text-align: center;
+}
+
+.transaction-form form button{
+  background: #41a367;
+  padding: 15px 40px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}

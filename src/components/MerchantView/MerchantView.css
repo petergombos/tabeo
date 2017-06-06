@@ -1,0 +1,30 @@
+.merchant{
+  margin: 4rem auto;
+  background: white;
+  max-width: 90%;
+  width: 800px;
+  padding: 15px;
+}
+
+.merchant .company{
+  margin-bottom: 15px;
+}
+
+.merchant .tabs{
+  margin-bottom: 15px;
+}
+
+.merchant .tabs div{
+  width: 50%;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  background: #b3b3b3;
+  color: white;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.merchant .tabs div.active{
+  background: #186e70;
+}

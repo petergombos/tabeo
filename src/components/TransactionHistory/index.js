@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import orderBy from 'lodash/orderBy'
 
 import ListItem from './ListItem'
-
-const toDecimal = (num) =>
-  parseFloat(Math.round(num * 100) / 100).toFixed(2)
+import decimal from '../../utils/decimal'
 
 class TransactionHistory extends Component {
   constructor (props) {
@@ -42,9 +40,9 @@ class TransactionHistory extends Component {
     , 0)
     return (
       <div>
-        <div>
-          <span className='sales'>Sales: {transactions.length}</span>
-          <span className='total'>Total Amount: £{toDecimal(totalAmount)}</span>
+        <div className='stats'>
+          <span>Sales: {transactions.length}</span>
+          <span className='pull-right'>Total Amount: £{decimal(totalAmount)}</span>
         </div>
         <table>
           <thead>

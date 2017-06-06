@@ -3,6 +3,7 @@ import { Field, reduxForm } from 'redux-form'
 import PropTypes from 'prop-types'
 
 import FormInput from '../FormInput'
+import './TransactionForm.css'
 
 const validate = values => {
   const errors = {}
@@ -26,16 +27,29 @@ const validate = values => {
 const TransactionForm = (props) => {
   const { submitting, handleSubmit } = props
   return (
-    <form onSubmit={handleSubmit}>
-      <Field name='name' type='text' component={FormInput} label='Transaction Name *' />
-      <Field name='price' type='number' component={FormInput} label='Cash Price *' />
-      <Field name='reference' type='text' component={FormInput} label='Internal Reference' />
-      <Field name='email' type='email' component={FormInput} label='Customer Email Address *' />
-      <Field name='customerName' type='text' component={FormInput} label='Customer First Name *' />
-      <div>
-        <button type='submit' disabled={submitting}>Submit</button>
+    <div className='transaction-form'>
+      <div className='info'>
+        <h2>New Transaction</h2>
+        <p>
+          Please enter the transaction name, cash, price and your customer's details.
+          <br />Fileds marked with * are mandatory.
+        </p>
       </div>
-    </form>
+      <form onSubmit={handleSubmit}>
+        <Field name='name' type='text' component={FormInput} label='Transaction Name *' />
+        <div>
+          <Field
+            name='price' type='number' component={FormInput} label='Cash Price *' className='half' />
+          <Field
+            name='reference' type='text' component={FormInput} label='Internal Reference' className='half pull-right' />
+        </div>
+        <Field name='email' type='email' component={FormInput} label='Customer Email Address *' />
+        <Field name='customerName' type='text' component={FormInput} label='Customer First Name *' />
+        <div className='form-footer'>
+          <button type='submit' disabled={submitting}>Send Now</button>
+        </div>
+      </form>
+    </div>
   )
 }
 
