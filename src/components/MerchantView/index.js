@@ -8,8 +8,18 @@ import './MerchantView.css'
 class MerchantView extends Component {
   constructor (props) {
     super(props)
-
+    this.state = {
+      tab: 'form'
+    }
     this.onSubmit = this.onSubmit.bind(this)
+  }
+
+  showTab (key) {
+    if (this.state.tab !== key) {
+      this.setState({
+        tab: key
+      })
+    }
   }
 
   onSubmit (values) {
@@ -20,9 +30,24 @@ class MerchantView extends Component {
     const { transactions } = this.props
     return (
       <div>
-        <h1>Tabeo</h1>
-        <TransactionForm onSubmit={this.onSubmit} />
-        <TransactionHistory transactions={transactions} />
+        <div className='tabs'>
+          <div
+            onClick={() => this.showTab('form')}
+            className={this.state.tab === 'form' ? 'active' : ''}>
+            start a new tranasction
+          </div>
+          <div
+            onClick={() => this.showTab('history')}
+            className={this.state.tab === 'history' ? 'active' : ''}>
+            transaction history
+          </div>
+        </div>
+        {this.state.tab === 'form' &&
+          <TransactionForm onSubmit={this.onSubmit} />
+        }
+        {this.state.tab === 'history' &&
+          <TransactionHistory transactions={transactions} />
+        }
       </div>
     )
   }
