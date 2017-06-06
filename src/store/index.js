@@ -1,5 +1,7 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, compose } from 'redux'
 import { reducer as reduxFormReducer } from 'redux-form'
+import persistState from 'redux-localstorage'
+
 import transactions from './transactions'
 
 const reducers = combineReducers({
@@ -7,9 +9,14 @@ const reducers = combineReducers({
   form: reduxFormReducer
 })
 
+const enhancer = compose(
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  persistState()
+)
+
 const store = createStore(
   reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  enhancer
 )
 
 export default store

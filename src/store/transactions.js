@@ -8,7 +8,7 @@ export const addTransaction = (payload) => ({
   type: ADD,
   payload: {
     ...payload,
-    createdAt: new Date(),
+    createdAt: new Date().getTime(),
     status: 'pending',
     id: uuidV4()
   }
