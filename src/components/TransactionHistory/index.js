@@ -4,6 +4,8 @@ import orderBy from 'lodash/orderBy'
 
 import ListItem from './ListItem'
 import decimal from '../../utils/decimal'
+import './TransactionHistory.css'
+import arrows from './arrows.png'
 
 class TransactionHistory extends Component {
   constructor (props) {
@@ -39,7 +41,7 @@ class TransactionHistory extends Component {
       mem + parseFloat(item.price)
     , 0)
     return (
-      <div>
+      <div className='transaction-history'>
         <div className='stats'>
           <span>Sales: {transactions.length}</span>
           <span className='pull-right'>Total Amount: £{decimal(totalAmount)}</span>
@@ -47,11 +49,11 @@ class TransactionHistory extends Component {
         <table>
           <thead>
             <tr>
-              <td onClick={() => this.changeOrder('name')}>Name</td>
-              <td onClick={() => this.changeOrder('price')}>Price</td>
-              <td onClick={() => this.changeOrder('createdAt')}>Date</td>
-              <td onClick={() => this.changeOrder('reference')}>Reference</td>
-              <td onClick={() => this.changeOrder('status')}>Status</td>
+              <td onClick={() => this.changeOrder('name')}>Name<img src={arrows} /></td>
+              <td onClick={() => this.changeOrder('price')}>Price<img src={arrows} /></td>
+              <td onClick={() => this.changeOrder('createdAt')}>Date<img src={arrows} /></td>
+              <td onClick={() => this.changeOrder('reference')}>Reference<img src={arrows} /></td>
+              <td onClick={() => this.changeOrder('status')}>Status<img src={arrows} /></td>
             </tr>
           </thead>
           <tbody>

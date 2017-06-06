@@ -9,7 +9,7 @@ export const addTransaction = (payload) => ({
   payload: {
     ...payload,
     createdAt: new Date().getTime(),
-    status: 'pending',
+    status: Math.random() > 0.5 ? 'pending' : 'processed',
     id: uuidV4()
   }
 })

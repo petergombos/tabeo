@@ -1,0 +1,42 @@
+.transaction-history .stats{
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.transaction-history table{
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse:collapse;
+}
+
+.transaction-history thead td{
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.transaction-history thead td img{
+  width: 12px;
+  margin-left: 5px;
+}
+
+.transaction-history tbody td{
+  padding: 15px 10px;
+}
+
+.transaction-history tbody tr:nth-child(odd){
+  background: #c0dec3;
+}
+
+.transaction-history tbody td.price{
+  text-align: right;
+}
+
+.transaction-history tbody td.status{
+  text-align: right;
+  color: #41a367;
+}
+
+.transaction-history tbody td.status.pending{
+  text-align: right;
+  color: #9fa500;
+}

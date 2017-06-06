@@ -24,6 +24,7 @@ class MerchantView extends Component {
 
   onSubmit (values) {
     this.props.addTransaction(values)
+    this.showTab('history')
   }
 
   render () {
