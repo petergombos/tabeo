@@ -47,7 +47,7 @@ class MerchantView extends Component {
           <div
             onClick={() => this.showTab('form')}
             className={this.state.tab === 'form' ? 'active' : ''}>
-            start a new tranasction
+            start a new transaction
           </div>
           <div
             onClick={() => this.showTab('history')}
