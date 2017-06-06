@@ -33,17 +33,15 @@ const TransactionForm = (props) => {
         <h2>New Transaction</h2>
         <p>
           Please enter the transaction name, cash, price and your customer's details.
-          <br />Fileds marked with * are mandatory.
+          <br />Fields marked with * are mandatory.
         </p>
       </div>
       <form onSubmit={handleSubmit}>
         <Field name='name' type='text' component={FormInput} label='Transaction Name *' />
-        <div>
-          <Field
-            name='price' type='number' component={FormInput} label='Cash Price *' className='half' />
-          <Field
-            name='reference' type='text' component={FormInput} label='Internal Reference' className='half pull-right' />
-        </div>
+        <Field
+          name='price' type='number' component={FormInput} label='Cash Price *' className='half' />
+        <Field
+          name='reference' type='text' component={FormInput} label='Internal Reference' className='half pull-right' />
         <Field name='email' type='email' component={FormInput} label='Customer Email Address *' />
         <Field name='customerName' type='text' component={FormInput} label='Customer First Name *' />
         <div className='form-footer'>

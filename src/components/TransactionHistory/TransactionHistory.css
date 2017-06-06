@@ -16,6 +16,7 @@
 .transaction-history thead td{
   cursor: pointer;
   font-weight: 600;
+  text-align: center;
 }
 
 .transaction-history thead td img{

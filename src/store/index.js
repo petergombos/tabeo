@@ -10,15 +10,19 @@ const reducers = combineReducers({
   form: reduxFormReducer
 })
 
+const persistStateMiddleware = persistState('transactions', {
+  key: 'tabeo'
+})
+
 // Add Redux Devtools and Localstorage Support
 const getComposeEnhancers = () => {
   if (window.navigator.userAgent.includes('Chrome')) {
     return compose(
-      persistState()
+      persistStateMiddleware
       , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
   }
-  return compose(persistState())
+  return compose(persistStateMiddleware)
 }
 
 // Creating the store
